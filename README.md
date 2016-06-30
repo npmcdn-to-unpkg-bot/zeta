@@ -1,1 +1,1 @@
-run the `npm install` command after cloning this repo :) 
+1. run the `npm install` command after cloning this repo :) 
