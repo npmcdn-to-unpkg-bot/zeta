@@ -1,0 +1,184 @@
+@import "variable";
+@import "mixins";
+
+body{
+	background: $bg-grey;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+}
+.clear{
+	clear: both;
+}
+.brown{
+	color: #c6c1b0;
+}
+
+//========================//
+// =======  HEADER ========
+// =======================//
+.header{
+		background: $white;
+		//border-bottom: 1px $lgrey solid;
+		height: 80px;
+		@include box_shadow;
+	.logo{
+		border-right: 1px $lgrey solid;
+		padding: 20px;
+		float: left;
+		img{
+			width: 40px;	
+		}
+	}
+
+	.nav-icons{
+		margin: 20px 10px;
+		float: left;
+		a{
+			@include icons_nav;
+		}
+	}
+	.twitter-logo{
+		img{
+			width: 25px;
+		}
+	}
+	.search-form{
+		margin: 20px;
+		input{
+			height: 40px;
+			border-radius: 50px;
+			border: 1px $lgrey solid;
+			padding-left: 1em;
+			&:focus{
+				outline: 0;
+				box-shadow: 0;
+			}
+		}
+		img{
+			width: 40px;
+			border-radius: 100%;	
+		}
+	}
+}
+
+.content{
+	margin-top: 8em;
+	.tabs{
+		height: 80px;
+		background: $white;
+		@include box_shadow;
+		.active{
+			border-bottom: 5px $lblue solid;
+		}
+		p{
+			color: $lbrown;
+			font-weight: 300;
+			margin: 20px 0 0px;
+		}
+		h4{
+			font-weight: 800;
+			color: $dgrey;
+
+		}
+		.each-tab{
+			&:hover{
+				cursor: pointer;
+				border-bottom: 5px $lblue solid;
+			}
+		}
+	}
+	
+	.post-wrapper{
+		margin-top: 2em;
+		background: $white;
+		@include box_shadow;
+		.pt-each{
+			padding: 1rem 2rem 2rem 1rem;
+			border-bottom: 1px $bg-grey solid;
+			img{
+				width: 40px;
+				border-radius: 100%;
+			}
+			.pt-title{
+				font-weight: 600;
+				color: $dgrey;
+			}
+			.pt-username{
+
+				font-weight: 300;
+			}
+			.pt-timestamp{
+
+			}
+			.pt-activities, {
+				a{
+					@include post_icons;
+					margin-right: 15px;	
+				}
+			}
+			.pt-expand{
+				a{
+					@include post_icons;	
+				}
+			}
+		}
+	}
+}
+.video_container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.video_container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+//========================//
+// =======  RESPONSIVE =====
+// =======================//
+@media(max-width: 768px){
+	.content{
+		margin-top: 5em;
+	}
+	.header {
+		height: 50px;
+		.logo {
+			padding: 10px;
+			img{
+				width: 30px;
+			}
+		}
+		.nav-icons{
+			margin: 10px;
+			a{
+				padding: 8px;
+				margin: 0px 3px;
+				font-size: 0.8rem;
+			}
+		}
+		.twitter-logo{
+			padding-top: 15px;
+			img{
+				width: 20px;
+			}
+		}
+		.search-form{
+			margin: 10px 0;
+			position: absolute;
+			input{
+				width: 100px;
+				margin-left: 3em;
+				height: 30px;
+			}
+			img{
+				width: 30px;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,25 @@
+@mixin box_shadow{
+	-webkit-box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    0px 2px 2px 0px rgba(50, 50, 50, 0.2);
+	box-shadow:         0px 2px 2px 0px rgba(50, 50, 50, 0.2);
+}
+@mixin post_icons{
+	color: $lbrown;
+	text-decoration: none;
+	&:hover{
+		color: $lblue;
+	}
+}
+@mixin icons_nav{
+	color: $dgrey;
+	border: 1px $lgrey solid;
+	text-decoration: none;
+	border-radius: 100%;
+	text-align: center;
+	padding: 12px;
+	margin: 0px 8px;
+	&:hover{
+		border: 1px $lblue solid;
+		color: $lblue;
+	}
+}
